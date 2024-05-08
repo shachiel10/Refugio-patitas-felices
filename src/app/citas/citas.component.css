@@ -1,0 +1,80 @@
+/* Estilos para las tarjetas de citas */
+.filtro-container {
+  margin-bottom: 20px;
+}
+
+.filtro-container h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.filtro-inputs {
+  display: flex;
+  align-items: center;
+}
+
+.filtro-inputs label {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.filtro-inputs input[type="date"],
+.filtro-inputs input[type="time"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.filtro-inputs input[type="date"]:focus,
+.filtro-inputs input[type="time"]:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+
+.citas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre tarjetas */
+  }
+  
+  .cita-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Ajusta el ancho de las tarjetas según tu diseño */
+    background-image: url(../../assets/img/fondop.jpg); /* Blanco */
+    border: 5px solid #db6e77; /* Verde */
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.1); /* Verde */
+    background-size: cover; /* La imagen se ajusta y se muestra completa */
+    font-family: Consolas, sans-serif; /* Cambia el tipo de letra */
+  }
+  
+  /* Colores relacionados al tema */
+  h2 {
+    color: #4CAF50; /* Verde */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los textos dentro de las tarjetas */
+  .cita-card p {
+    color: #333333; /* Negro */
+  }
+  
+  /* Estilos para el botón "Leer más sobre esto" */
+  .cita-card button {
+    background-color: #4CAF50; /* Verde */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cita-card button:hover {
+    background-color: #18791b; /* Verde más oscuro al pasar el cursor */
+  }
+  

@@ -1,0 +1,16 @@
+<body>
+    <div class="card-group">
+        @for (h of misHeroes; track h; let i = $index){
+            <div class="card">
+                <img class="card-img" [src]="h.img" alt="Hero Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{h.raza}}</h5>
+                    <p class="card-text">{{h.comportamiento}}</p>
+                    <p class="card-text"><small class="text-muted">{{h.edad}}</small></p>
+                </div>
+                <a [routerLink]="['/heroe', i]" class="mb-3 btn btn-outline-primary btn-block btn-refugio">Mas Info</a>
+                <button routerLink="/cita-formulario">Adoptar</button>
+            </div>
+        }
+    </div>
+</body>

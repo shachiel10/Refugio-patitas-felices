@@ -1,0 +1,13 @@
+@if(indice == -1){
+    <div class="row animate_animated animate_backInLeft">
+        <div class="co-md-12">
+            <div class="alert alert-info" role="alert">
+                No existen resultado de {{raza}}
+            </div>
+        </div>
+
+    </div>
+}
+@else{
+    <app-unheroe [heroe]='miraza'></app-unheroe>
+}

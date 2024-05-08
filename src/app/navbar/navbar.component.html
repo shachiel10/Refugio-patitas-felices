@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><h1 class="logo" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Patitas <br> <span style="text-align: right; color: rgb(3, 190, 0); ">felices</span>&nbsp; <img style="width: 50px; text-align: center;" src="../../assets/img/logo.webp" alt=""> </h1>
+        <h6>"Un hogar para cada latido"</h6>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                 aria-controls="navbar SupportedContent" aria-expanded="false" aria-label="Toggle navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home">Inicio</a>       
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/heroes">Mascotas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/about">Quienes somos...</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/citas">Citas</a>
+                </li>
+            </ul>
+            <br>
+            <div id="buscoheroe" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Buscar" #buscarTexto (keyup.enter)="buscarUnHeroe(buscarTexto.value)">
+                <button class="btn btn-outline-success my-2 my-sm-0" (click)="buscarUnHeroe(buscarTexto.value)" type="button">Search</button>
+            </div>
+        </div>
+    </div>
+</nav>

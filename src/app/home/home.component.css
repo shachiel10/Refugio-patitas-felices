@@ -1,0 +1,31 @@
+.homee{
+  background-color: rgb(212, 255, 225);
+  border-radius: 20px;
+  border-style: double;
+}
+table{
+    align-content: center;
+    margin: 70px;
+}
+p{
+    text-align: justify;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formulario{
+    margin: 70px;
+  }
+  .conocenos{
+    margin: 80px;
+  }
+  
+  .tablaDatos{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }

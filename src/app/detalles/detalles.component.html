@@ -1,0 +1,20 @@
+<div class="cita-card">
+  <div class="cita-header" (click)="toggleDetalles()">
+    <h3>{{ cita.nombre }}</h3>
+    <p>{{ cita.fecha }}</p>
+  </div>
+  <div class="cita-body" *ngIf="mostrarDetalles">
+    <p><strong>Teléfono:</strong> {{ cita.telefono }}</p>
+    <p><strong>Dirección:</strong> {{ cita.direccion }}</p>
+    <p><strong>Hora:</strong> {{ cita.hora }}</p>
+    <p><strong>Tiene Mascotas:</strong> {{ cita.mascotas }}</p>
+    <div *ngIf="cita.mascotas === 'si'">
+      <h4>Datos de la Mascota:</h4>
+      <p><strong>Edad Aprox:</strong> {{ cita.edad }}</p>
+      <p><strong>Color:</strong> {{ cita.color }}</p>
+      <p><strong>Raza:</strong> {{ cita.raza }}</p>
+      <p><strong>Tiempo en el refugio:</strong> {{ cita.tiempoRefugio }}</p>
+      <p><strong>Descripción de comportamiento:</strong> {{ cita.descripcionComportamiento }}</p>
+    </div>
+  </div>
+</div>

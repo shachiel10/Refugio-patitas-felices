@@ -1,0 +1,24 @@
+.cita-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .cita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .cita-body {
+    margin-top: 10px;
+  }
+  
+  .cita-header:hover,
+  .cita-header:focus {
+    background-color: #f0f0f0;
+  }
+  

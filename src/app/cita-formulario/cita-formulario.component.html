@@ -1,0 +1,33 @@
+<h1 style="text-align: center;">Agenda tu cita</h1>
+<div #alertContainer></div>
+<form [formGroup]="citaForm" (ngSubmit)="enviarCita()">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" formControlName="nombre">
+  </div>
+  <div>
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" formControlName="telefono">
+  </div>
+  <div>
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" formControlName="direccion">
+  </div>
+  <div>
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" formControlName="fecha">
+    <div *ngIf="citaForm.controls['fecha'].errors && citaForm.controls['fecha'].errors['fechaPasada']" class="invalid-feedback">La fecha no puede ser pasada.</div>
+  </div> 
+  <div>
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" formControlName="hora">
+  </div>
+  <div>
+    <label for="mascotas">¿Tiene mascotas?</label>
+    <select id="mascotas" formControlName="mascotas" (change)="toggleCamposMascota()">
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+  <button type="submit">Agendar Cita</button>
+</form>

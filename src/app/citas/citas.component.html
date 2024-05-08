@@ -1,0 +1,36 @@
+<div class="filtro-container">
+  <h2>Filtrar Citas:</h2>
+  <div class="filtro-inputs">
+    <label for="fechaInput">Fecha:</label>
+    <input type="date" id="fechaInput" [(ngModel)]="fechaFiltro" (change)="filtrarCitas()">
+    <label for="horaInput">Hora:</label>
+    <input type="time" id="horaInput" [(ngModel)]="horaFiltro" (change)="filtrarCitas()">
+    <label for="estadoInput">Estado:</label>
+    <select id="estadoInput" [(ngModel)]="estadoFiltro" (change)="filtrarCitas()">
+      <option value="todos">Todos</option>
+      <option value="realizadas">Realizadas</option>
+      <option value="pendientes">Pendientes</option>
+    </select>
+  </div>
+</div>
+
+<div *ngIf="citasFiltradas.length > 0">
+  <h2>Citas Guardadas:</h2>
+  <div class="citas-container">
+    <div *ngFor="let cita of citasFiltradas" class="cita-card">
+      <!-- Detalles de la cita -->
+      <h3>Detalles de la cita:</h3>
+      <p>Nombre: {{ cita.nombre }}</p>
+      <p>Teléfono: {{ cita.telefono }}</p>
+      <p>Dirección: {{ cita.direccion }}</p>
+      <p>Fecha: {{ cita.fecha }}</p>
+      <p>Hora: {{ cita.hora }}</p>
+      <p>Estado: {{ cita.estado }}</p>
+      <p>Mascotas: {{ cita.mascotas }}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="citasFiltradas.length === 0">
+  <p>No hay citas que coincidan con los filtros seleccionados.</p>
+</div>

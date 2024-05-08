@@ -1,0 +1,33 @@
+<body>
+
+<h1 class="animate_animated animate_bounce">{{heroe.raza}} <br><small>{{heroe.edad}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col md-4 text-center">
+        <img width="300px" src="{{heroe.img}}" alt="" class="img-fluid">
+        <br><br>
+        <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+
+    <div class="col md-8">
+        <h3>{{heroe.tiemporefugio}}</h3>
+        <h3>Color: {{heroe.color}}</h3>
+        <hr>
+        <p>
+            {{heroe.comportamiento}}
+        </p>
+        @if(heroe.raza=='Marvel'){
+            <div>
+                <img src="../../assets/img/logo.png" width="150px" alt="">
+            </div>
+        }
+        @else{
+            <div>
+                <img src="../../assets/img/logo.png" width="150px" alt="">
+            </div>
+        }
+    </div>
+</div>
+    
+</body>
